@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-light: rgb(205, 255, 218);
+  --brand-mid: rgb(176, 219, 235);
+  --brand-dark: rgb(148, 185, 255);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-brand-700;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-mid);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-dark);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-700);
+}
+
+.brand-gradient-bg {
+  background: rgb(205, 255, 218);
+  background: linear-gradient(90deg, rgba(205, 255, 218, 1) 0%, rgba(176, 219, 235, 1) 50%, rgba(148, 185, 255, 1) 100%);
+}
+
+.apple-button {
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-brand-600 border border-transparent rounded-md shadow-sm hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors duration-300;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
