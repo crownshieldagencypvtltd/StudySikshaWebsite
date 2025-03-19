@@ -8,25 +8,25 @@ import { Button } from "@/components/ui/button"
 const destinations = [
   {
     country: "USA",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2?height=400&width=600",
     description: "Home to world-renowned universities like Harvard, MIT, and Stanford.",
     features: ["Diverse course options", "Cutting-edge research", "Vibrant campus life"],
   },
   {
     country: "UK",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=600?height=400&width=600",
     description: "Prestigious education system with universities like Oxford and Cambridge.",
     features: ["Rich academic heritage", "Shorter course duration", "Global recognition"],
   },
   {
     country: "Canada",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://images.pexels.com/photos/1750754/pexels-photo-1750754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2?height=400&width=600",
     description: "Known for quality education, safety, and post-study work opportunities.",
     features: ["Affordable tuition", "Work while studying", "Immigration pathways"],
   },
   {
     country: "Australia",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2?height=400&width=600",
     description: "High-quality education with a focus on research and innovation.",
     features: ["Excellent quality of life", "Part-time work allowed", "Post-study work visa"],
   },
@@ -39,7 +39,7 @@ const destinations = [
   },
   {
     country: "Germany",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "https://images.pexels.com/photos/20097688/pexels-photo-20097688/free-photo-of-back-view-of-a-woman-walking-in-a-library.jpeg?auto=compress&cs=tinysrgb&w=600?height=400&width=600",
     description: "Tuition-free education at public universities with strong industry connections.",
     features: ["No tuition fees", "Strong engineering programs", "Work opportunities"],
   },
