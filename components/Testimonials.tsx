@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
 
 const testimonials = [
@@ -66,18 +65,12 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-800">What Our Students Say</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from students who have successfully achieved their study abroad dreams with Shiksha Yogya.
           </p>
-        </motion.div>
+        </div>
 
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden">
@@ -147,4 +140,3 @@ export default function Testimonials() {
     </section>
   )
 }
-

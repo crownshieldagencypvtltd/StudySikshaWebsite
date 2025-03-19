@@ -1,7 +1,6 @@
 "use client"
 import type React from "react"
 import { useState } from "react"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 export const WobbleCard = ({
@@ -24,7 +23,7 @@ export const WobbleCard = ({
     setMousePosition({ x, y })
   }
   return (
-    <motion.section
+    <section
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => {
@@ -46,7 +45,7 @@ export const WobbleCard = ({
             "0 10px 32px rgba(34, 42, 53, 0.12), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.05), 0 4px 6px rgba(34, 42, 53, 0.08), 0 24px 108px rgba(47, 48, 55, 0.10)",
         }}
       >
-        <motion.div
+        <div
           style={{
             transform: isHovering
               ? `translate3d(${-mousePosition.x}px, ${-mousePosition.y}px, 0) scale3d(1.03, 1.03, 1)`
@@ -57,9 +56,9 @@ export const WobbleCard = ({
         >
           <Noise />
           {children}
-        </motion.div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   )
 }
 
@@ -68,11 +67,9 @@ const Noise = () => {
     <div
       className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
       style={{
-        
         backgroundImage: "url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Cg fill-opacity=%220.07%22%3E%3Cpolygon points=%2210,0 12,0 10,2%22/%3E%3Cpolygon points=%2230,0 32,0 30,2%22/%3E%3Cpolygon points=%2210,38 12,40 10,40%22/%3E%3Cpolygon points=%2230,40 32,40 30,38%22/%3E%3C/g%3E%3C/svg%3E')",
         backgroundSize: "30%",
       }}
     ></div>
   )
 }
-
