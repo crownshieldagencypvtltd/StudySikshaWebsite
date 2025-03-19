@@ -1,3 +1,4 @@
+"use client"
 import Hero from "@/components/Hero"
 import ServicesOverview from "@/components/ServicesOverview"
 import StudyDestinations from "@/components/StudyDestinations"

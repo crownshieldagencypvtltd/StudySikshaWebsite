@@ -1,3 +1,4 @@
+"use client"
 import ServiceHero from "@/components/ServiceHero"
 import AdmissionsService from "@/components/services/AdmissionsService"
 import VisaService from "@/components/services/VisaService"
