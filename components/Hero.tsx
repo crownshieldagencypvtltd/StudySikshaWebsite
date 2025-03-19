@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
 const heroImages = [
@@ -45,9 +44,7 @@ export default function Hero() {
       {heroImages.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            currentImage === index ? "opacity-100" : "opacity-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${currentImage === index ? "opacity-100" : "opacity-0"}`}
         >
           <div className="absolute inset-0 bg-brand-gradient opacity-80 z-10" />
           <Image
@@ -64,7 +61,7 @@ export default function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-3xl mx-auto text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <div>
             <Image
               priority={true}
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-15%20at%2022.43.16_21b245d9.jpg-Wl3OUCBIC0swFiSSd9QWrhkjt7lPHK.jpeg"
@@ -73,32 +70,17 @@ export default function Hero() {
               height={120}
               className="mx-auto mb-6"
             />
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white"
-          >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
             Your Gateway to <span className="text-brand-800">Global Education</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-white mb-8"
-          >
+          <p className="text-xl text-white mb-8">
             Providing expert guidance for studying abroad in UK, USA, Canada, Australia, Europe and more.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
               size="lg"
@@ -114,7 +96,7 @@ export default function Hero() {
             >
               <Link href="/services">Explore Our Services</Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -125,9 +107,7 @@ export default function Hero() {
             <button
               key={index}
               onClick={() => setCurrentImage(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                currentImage === index ? "bg-brand-600 w-8" : "bg-white/50"
-              }`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${currentImage === index ? "bg-brand-600 w-8" : "bg-white/50"}`}
               aria-label={`View ${heroImages[index].title}`}
             />
           ))}
@@ -136,4 +116,3 @@ export default function Hero() {
     </section>
   )
 }
-

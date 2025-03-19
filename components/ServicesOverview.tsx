@@ -1,51 +1,44 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { GraduationCap, Globe, FileText, Building, Plane, Users } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 const services = [
   {
-    icon: <GraduationCap className="w-12 h-12 text-brand-600" />,
+    icon: <GraduationCap className="w-12 h-12 text-brand-600" />, 
     title: "University Admissions",
-    description:
-      "Expert guidance on university selection, application process, and securing admissions to top institutions worldwide.",
+    description: "Expert guidance on university selection, application process, and securing admissions to top institutions worldwide.",
     link: "/services#admissions",
   },
   {
     icon: <FileText className="w-12 h-12 text-brand-600" />,
     title: "Visa Assistance",
-    description:
-      "Comprehensive support for student visa applications, documentation, and interview preparation with high success rates.",
+    description: "Comprehensive support for student visa applications, documentation, and interview preparation with high success rates.",
     link: "/services#visa",
   },
   {
     icon: <Globe className="w-12 h-12 text-brand-600" />,
     title: "Study Abroad Programs",
-    description:
-      "Tailored study abroad programs in UK, USA, Canada, Australia, Europe and other popular destinations for various courses.",
+    description: "Tailored study abroad programs in UK, USA, Canada, Australia, Europe and other popular destinations for various courses.",
     link: "/services#programs",
   },
   {
     icon: <Plane className="w-12 h-12 text-brand-600" />,
     title: "Travel & Accommodation",
-    description:
-      "Assistance with travel arrangements, accommodation options, and pre-departure orientation for a smooth transition.",
+    description: "Assistance with travel arrangements, accommodation options, and pre-departure orientation for a smooth transition.",
     link: "/services#travel",
   },
   {
     icon: <Building className="w-12 h-12 text-brand-600" />,
     title: "Scholarship Guidance",
-    description:
-      "Information and application support for scholarships, grants, and financial aid opportunities to fund your education.",
+    description: "Information and application support for scholarships, grants, and financial aid opportunities to fund your education.",
     link: "/services#scholarship",
   },
   {
     icon: <Users className="w-12 h-12 text-brand-600" />,
     title: "Career Counseling",
-    description:
-      "Professional career counseling to help you choose the right course and university aligned with your career goals.",
+    description: "Professional career counseling to help you choose the right course and university aligned with your career goals.",
     link: "/services#counseling",
   },
 ]
@@ -54,28 +47,18 @@ export default function ServicesOverview() {
   return (
     <section className="py-20 brand-gradient-bg">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-800">Our Premium Services</h2>
           <p className="text-xl text-brand-700 max-w-3xl mx-auto">
             Shiksha Yogya provides comprehensive education consultancy services tailored to meet your specific
             requirements with excellence and reliability.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
+          {services.map((service) => (
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white rounded-lg p-6 shadow-lg border border-gray-100 hover:border-brand-500/50 transition-all duration-300 group"
             >
               <div className="mb-4">{service.icon}</div>
@@ -101,17 +84,11 @@ export default function ServicesOverview() {
                   />
                 </svg>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 text-center"
-        >
+        <div className="mt-12 text-center">
           <Button
             asChild
             size="lg"
@@ -119,9 +96,8 @@ export default function ServicesOverview() {
           >
             <Link href="/services">Explore All Services</Link>
           </Button>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
 }
-
