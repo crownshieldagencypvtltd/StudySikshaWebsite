@@ -51,6 +51,7 @@ export default function Hero() {
             src={image.src || "/placeholder.svg"}
             alt={image.alt}
             fill
+
             className="object-cover"
             priority={index === 0}
             sizes="100vw"
