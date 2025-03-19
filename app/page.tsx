@@ -1,7 +1,7 @@
 "use client"
 import Hero from "@/components/Hero"
 import ServicesOverview from "@/components/ServicesOverview"
-import StudyDestinations from "@/components/StudyDestinations"
+import dynamic from "next/dynamic";
 import WhyChooseUs from "@/components/WhyChooseUs"
 import Testimonials from "@/components/Testimonials"
 import Stats from "@/components/Stats"
@@ -9,6 +9,7 @@ import CallToAction from "@/components/CallToAction"
 import FaqSection from "@/components/FaqSection"
 import WobbleCardDemo from "@/components/wobble-card-demo"
 import WorldMapDemo from "@/components/world-map-demo"
+const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: false });
 
 export default function Home() {
   return (

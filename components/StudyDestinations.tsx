@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,25 +6,25 @@ import { Button } from "@/components/ui/button"
 const destinations = [
   {
     country: "USA",
-    image: "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2?height=400&width=600",
+    image: "https://images.pexels.com/photos/356844/pexels-photo-356844.jpeg?auto=compress&cs=tinysrgb",
     description: "Home to world-renowned universities like Harvard, MIT, and Stanford.",
     features: ["Diverse course options", "Cutting-edge research", "Vibrant campus life"],
   },
   {
     country: "UK",
-    image: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=600?height=400&width=600",
+    image: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb",
     description: "Prestigious education system with universities like Oxford and Cambridge.",
     features: ["Rich academic heritage", "Shorter course duration", "Global recognition"],
   },
   {
     country: "Canada",
-    image: "https://images.pexels.com/photos/1750754/pexels-photo-1750754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2?height=400&width=600",
+    image: "https://images.pexels.com/photos/1750754/pexels-photo-1750754.jpeg?auto=compress&cs=tinysrgb",
     description: "Known for quality education, safety, and post-study work opportunities.",
     features: ["Affordable tuition", "Work while studying", "Immigration pathways"],
   },
   {
     country: "Australia",
-    image: "https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2?height=400&width=600",
+    image: "https://images.pexels.com/photos/68704/pexels-photo-68704.jpeg?auto=compress&cs=tinysrgb",
     description: "High-quality education with a focus on research and innovation.",
     features: ["Excellent quality of life", "Part-time work allowed", "Post-study work visa"],
   },
@@ -39,7 +37,7 @@ const destinations = [
   },
   {
     country: "Germany",
-    image: "https://images.pexels.com/photos/20097688/pexels-photo-20097688/free-photo-of-back-view-of-a-woman-walking-in-a-library.jpeg?auto=compress&cs=tinysrgb&w=600?height=400&width=600",
+    image: "https://images.pexels.com/photos/20097688/pexels-photo-20097688/free-photo-of-back-view-of-a-woman-walking-in-a-library.jpeg",
     description: "Tuition-free education at public universities with strong industry connections.",
     features: ["No tuition fees", "Strong engineering programs", "Work opportunities"],
   },
@@ -52,8 +50,8 @@ export default function StudyDestinations() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ staggerChildren: 0.1, duration: 0.5 }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-800">Popular Study Destinations</h2>
@@ -70,14 +68,17 @@ export default function StudyDestinations() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 hover-lift"
+              className="bg-white rounded-lg overflow-hidden border border-gray-200 transition-transform duration-300 hover:scale-105 will-change-transform"
             >
               <div className="relative h-48">
                 <Image
                   src={destination.image || "/placeholder.svg"}
                   alt={`Study in ${destination.country}`}
                   fill
+                  priority={index === 0} // Load only the first image eagerly
+                  loading={index === 0 ? "eager" : "lazy"}
                   className="object-cover"
+                  placeholder="empty"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
