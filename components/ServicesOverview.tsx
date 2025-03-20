@@ -94,7 +94,7 @@ export default function ServicesOverview() {
             size="lg"
             className="bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-md transition-all duration-300 transform hover:scale-105"
           >
-            <Link href="/services">Explore All Services</Link>
+            <Link href="/services">Explore All Swinervices</Link>
           </Button>
         </div>
       </div>
