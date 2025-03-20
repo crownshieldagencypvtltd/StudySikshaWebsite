@@ -1,8 +1,8 @@
+import Image from "next/image";
+import { WobbleCard } from "@/components/ui/wobble-card";
+import { memo } from "react";
 
-import Image from "next/image"
-import { WobbleCard } from "@/components/ui/wobble-card"
-
-export default function WobbleCardDemo() {
+const WobbleCardDemo = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
@@ -23,9 +23,12 @@ export default function WobbleCardDemo() {
           width={500}
           height={500}
           alt="UK education"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
+
       <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-brand-600">
         <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
           Scholarship Opportunities
@@ -34,6 +37,7 @@ export default function WobbleCardDemo() {
           Discover scholarships that can fund up to 100% of your education abroad.
         </p>
       </WobbleCard>
+
       <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-brand-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
           <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
@@ -49,10 +53,13 @@ export default function WobbleCardDemo() {
           width={500}
           height={500}
           alt="Study in Europe"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="absolute -right-10 md:-right-[40%] lg:-right-[10%] -bottom-10 object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>
-  )
-}
+  );
+};
 
+export default memo(WobbleCardDemo);

@@ -1,14 +1,15 @@
-"use client"
-import Hero from "@/components/Hero"
-import ServicesOverview from "@/components/ServicesOverview"
+"use client";
+import Hero from "@/components/Hero";
+import ServicesOverview from "@/components/ServicesOverview";
 import dynamic from "next/dynamic";
-import WhyChooseUs from "@/components/WhyChooseUs"
-import Testimonials from "@/components/Testimonials"
-import Stats from "@/components/Stats"
-import CallToAction from "@/components/CallToAction"
-import FaqSection from "@/components/FaqSection"
-import WobbleCardDemo from "@/components/wobble-card-demo"
-import WorldMapDemo from "@/components/world-map-demo"
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
+import Stats from "@/components/Stats";
+import CallToAction from "@/components/CallToAction";
+import FaqSection from "@/components/FaqSection";
+import WorldMapDemo from "@/components/world-map-demo";
+
+const WobbleCardDemo = dynamic(() => import("@/components/wobble-card-demo"), { ssr: false });
 const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: true });
 
 export default function Home() {
@@ -30,6 +31,5 @@ export default function Home() {
       <FaqSection />
       <CallToAction />
     </>
-  )
+  );
 }
-
