@@ -9,7 +9,7 @@ import CallToAction from "@/components/CallToAction"
 import FaqSection from "@/components/FaqSection"
 import WobbleCardDemo from "@/components/wobble-card-demo"
 import WorldMapDemo from "@/components/world-map-demo"
-const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: false });
+const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: true });
 
 export default function Home() {
   return (
