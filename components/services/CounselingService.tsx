@@ -6,27 +6,27 @@ import { Users, Star } from "lucide-react"
 
 const counselingServices = [
   {
-    title: "Career Assessment",
+    title: "Career Counseling",
     rating: 5,
-    description: "Comprehensive assessment to identify your strengths, interests, and suitable career paths.",
+    description: "Personalized guidance to help students discover their strengths, explore career options, and make informed decisions.",
   },
   {
     title: "Course Selection",
     rating: 5,
     description:
-      "Expert guidance on selecting the right course aligned with your career goals and academic background.",
+      "Helping students choose the right course based on their interests, skills, and future career goals.",
   },
   {
     title: "University Selection",
     rating: 5,
     description:
-      "Personalized recommendations for universities based on your preferences, budget, and career aspirations.",
+      "Expert assistance with applications, documentation, and securing admissions in top Indian and international universities.",
   },
   {
-    title: "Post-Study Options",
+    title: "Scholarships & Loans",
     rating: 4,
     description:
-      "Information on post-study work opportunities, further education, and career prospects in different countries.",
+      "Support in identifying and applying for scholarships, along with guidance on securing education loans.",
   },
 ]
 
@@ -46,8 +46,7 @@ export default function CounselingService() {
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-800">Career Counseling</h2>
           <p className="text-xl text-brand-700 max-w-3xl mx-auto">
-            Professional career counseling to help you choose the right course and university aligned with your career
-            goals.
+            Personalized guidance to help students discover their strengths, explore career options, and make informed decisions.
           </p>
         </motion.div>
 
@@ -122,4 +121,3 @@ export default function CounselingService() {
     </section>
   )
 }
-

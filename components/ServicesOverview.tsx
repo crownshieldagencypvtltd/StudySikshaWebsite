@@ -6,42 +6,43 @@ import { Button } from "@/components/ui/button"
 
 const services = [
   {
+    icon: <Users className="w-12 h-12 text-brand-600" />, 
+    title: "Career Counseling",
+    description: "Personalized guidance to help students discover their strengths, explore career options, and make informed decisions.",
+    link: "/services#counseling",
+  },
+  {
     icon: <GraduationCap className="w-12 h-12 text-brand-600" />, 
-    title: "University Admissions",
-    description: "Expert guidance on university selection, application process, and securing admissions to top institutions worldwide.",
+    title: "College Admissions",
+    description: "Expert assistance with applications, documentation, and securing admissions in top Indian and international universities.",
     link: "/services#admissions",
   },
   {
     icon: <FileText className="w-12 h-12 text-brand-600" />,
-    title: "Visa Assistance",
-    description: "Comprehensive support for student visa applications, documentation, and interview preparation with high success rates.",
-    link: "/services#visa",
-  },
-  {
-    icon: <Globe className="w-12 h-12 text-brand-600" />,
-    title: "Study Abroad Programs",
-    description: "Tailored study abroad programs in UK, USA, Canada, Australia, Europe and other popular destinations for various courses.",
-    link: "/services#programs",
-  },
-  {
-    icon: <Plane className="w-12 h-12 text-brand-600" />,
-    title: "Travel & Accommodation",
-    description: "Assistance with travel arrangements, accommodation options, and pre-departure orientation for a smooth transition.",
-    link: "/services#travel",
+    title: "Course Selection",
+    description: "Helping students choose the right course based on their interests, skills, and future career goals.",
+    link: "/services#courses",
   },
   {
     icon: <Building className="w-12 h-12 text-brand-600" />,
-    title: "Scholarship Guidance",
-    description: "Information and application support for scholarships, grants, and financial aid opportunities to fund your education.",
-    link: "/services#scholarship",
+    title: "Scholarships & Loans",
+    description: "Support in identifying and applying for scholarships, along with guidance on securing education loans.",
+    link: "/services#scholarships",
   },
   {
-    icon: <Users className="w-12 h-12 text-brand-600" />,
-    title: "Career Counseling",
-    description: "Professional career counseling to help you choose the right course and university aligned with your career goals.",
-    link: "/services#counseling",
+    icon: <Globe className="w-12 h-12 text-brand-600" />,
+    title: "Study Abroad",
+    description: "Comprehensive assistance for international education, including university selection, visa processing, and travel support.",
+    link: "/services#study-abroad",
+  },
+  {
+    icon: <Plane className="w-12 h-12 text-brand-600" />,
+    title: "Exam Preparation",
+    description: "Coaching referrals and personalized study plans for exams like JEE, NEET, IELTS, TOEFL, GRE, GMAT, CAT, and more.",
+    link: "/services#exam-prep",
   },
 ]
+
 
 export default function ServicesOverview() {
   return (

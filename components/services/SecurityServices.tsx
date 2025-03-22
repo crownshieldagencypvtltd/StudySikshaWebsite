@@ -30,7 +30,7 @@ export default function SecurityServices() {
             <Shield className="w-6 h-6 text-gold-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Security Guard Services</h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Professional security personnel trained to protect your property, assets, and people with vigilance and
             integrity.
           </p>
@@ -56,7 +56,7 @@ export default function SecurityServices() {
                 <div className="inline-block px-4 py-2 bg-gold-500 text-navy-950 font-semibold rounded-md mb-2">
                   Premium Security
                 </div>
-                <h3 className="text-2xl font-bold text-white">Trained & Certified Guards</h3>
+                <h3 className="text-2xl font-bold text-black">Trained & Certified Guards</h3>
               </div>
             </div>
           </motion.div>
@@ -67,8 +67,8 @@ export default function SecurityServices() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-white">Comprehensive Security Solutions</h3>
-            <p className="text-white/70 mb-8">
+            <h3 className="text-2xl font-bold mb-6 text-black">Comprehensive Security Solutions</h3>
+            <p className="text-black/70 mb-8">
               Our security personnel are rigorously trained and certified to handle various security challenges. We
               provide customized security solutions for residential complexes, commercial establishments, industrial
               facilities, and special events.
@@ -82,12 +82,12 @@ export default function SecurityServices() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start"
+                  className="flex items-start text-black/80"
                 >
                   <div className="mr-3 mt-1 bg-navy-800 rounded-full p-1">
                     <Check className="w-4 h-4 text-gold-500" />
                   </div>
-                  <span className="text-white/80">{feature}</span>
+                  <span className="text-black/80">{feature}</span>
                 </motion.div>
               ))}
             </div>

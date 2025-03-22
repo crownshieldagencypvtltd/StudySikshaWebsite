@@ -11,23 +11,23 @@ export default function ContactInfo() {
         <ul className="space-y-4">
           <li className="flex items-center">
             <Phone className="w-5 h-5 text-brand-600 mr-3" />
-            <a href="tel:+919876543210" className="text-gray-600 hover:text-brand-600 transition-colors duration-300">
-              +91 98765 43210
+            <a href="tel:+917319367046" className="text-gray-600 hover:text-brand-600 transition-colors duration-300">
+              +91 73193 67046 
             </a>
           </li>
           <li className="flex items-center">
             <Mail className="w-5 h-5 text-brand-600 mr-3" />
             <a
-              href="mailto:info@shikshayogya.com"
+              href="mailto:shikshayogya@gmail.com"
               className="text-gray-600 hover:text-brand-600 transition-colors duration-300"
             >
-              info@shikshayogya.com
+              shikshayogya@gmail.com
             </a>
           </li>
           <li className="flex items-start">
             <MapPin className="w-5 h-5 text-brand-600 mr-3 mt-1" />
             <span className="text-gray-600">
-              Shiksha Yogya Pvt. Ltd., 123 Education Street, New Delhi, India 110001
+              Shiksha Yogya Pvt. Ltd., Dimond Harbour Road, New Alipore Kolkata 700038
             </span>
           </li>
           <li className="flex items-center">
@@ -52,20 +52,12 @@ export default function ContactInfo() {
         <h3 className="text-xl font-semibold mb-4 text-brand-800">Our Branches</h3>
         <div className="space-y-4">
           <div>
-            <h4 className="font-medium text-brand-700">New Delhi (Head Office)</h4>
-            <p className="text-gray-600">123 Education Street, New Delhi, India 110001</p>
+            <h4 className="font-medium text-brand-700">Kolkata (Head Office)</h4>
+            <p className="text-gray-600"> Dimond Harbour Road, New Alipore Kolkata 700038</p>
           </div>
           <div>
-            <h4 className="font-medium text-brand-700">Mumbai</h4>
-            <p className="text-gray-600">456 Knowledge Avenue, Mumbai, India 400001</p>
-          </div>
-          <div>
-            <h4 className="font-medium text-brand-700">Bangalore</h4>
-            <p className="text-gray-600">789 Education Park, Bangalore, India 560001</p>
-          </div>
-          <div>
-            <h4 className="font-medium text-brand-700">Chennai</h4>
-            <p className="text-gray-600">321 Learning Road, Chennai, India 600001</p>
+            <h4 className="font-medium text-brand-700">Haldia</h4>
+            <p className="text-gray-600">Haldia - Durgachak, Haldia 721602</p>
           </div>
         </div>
       </div>

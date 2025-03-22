@@ -1,15 +1,15 @@
 "use client"
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { motion } from "framer-motion"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -102,7 +102,7 @@ export default function CareerForm() {
                       <FormItem>
                         <FormLabel>Phone Number</FormLabel>
                         <FormControl>
-                          <Input placeholder="+91 98765 43210" {...field} className="bg-navy-900 border-navy-700" />
+                          <Input placeholder="+91 7319367046" {...field} className="bg-navy-900 border-navy-700" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

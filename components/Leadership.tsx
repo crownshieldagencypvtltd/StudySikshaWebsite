@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, Linkedin } from "lucide-react"
+import { Linkedin, Mail, Phone } from "lucide-react"
 
 const leaders = [
   {
@@ -11,7 +11,7 @@ const leaders = [
     bio: "With over 15 years of experience in international education, Rajiv leads Shiksha Yogya with a vision for excellence and innovation.",
     contact: {
       email: "rajiv.kumar@shikshayogya.com",
-      phone: "+91 98765 43210",
+      phone: "+91 7319367046",
       linkedin: "https://linkedin.com/in/rajiv-kumar",
     },
   },

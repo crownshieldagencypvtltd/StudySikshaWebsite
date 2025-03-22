@@ -1,28 +1,28 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, Mail, MapPin } from "lucide-react"
+import { Mail, MapPin, Phone } from "lucide-react"
 
 const contactInfo = [
   {
     icon: <Phone className="w-6 h-6 text-brand-600" />,
     title: "Call Us",
-    content: "+91 98765 43210",
-    link: "tel:+919876543210",
+    content: "+91 7319367046",
+    link: "tel:+917319367046",
   },
   {
     icon: <Mail className="w-6 h-6 text-brand-600" />,
     title: "Email Us",
-    content: "info@shikshayogya.com",
-    link: "mailto:info@shikshayogya.com",
+    content: "shikshayogya@gmail.com",
+    link: "mailto:shikshayogya@gmail.com",
   },
   {
     icon: <MapPin className="w-6 h-6 text-brand-600" />,
     title: "Visit Us",
-    content: "123 Education Street, New Delhi",
-    link: "https://goo.gl/maps/123",
+    content: "Kolkata - Dimond Harbour Road, New Alipore Kolkata 700038",
+    link: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4622.200440143541!2d88.26666735443844!3d22.35758627538683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02647188f2256b%3A0x3cdf636d6abc71f5!2sDiamond%20Harbour%20Rd%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1742630115259!5m2!1sen!2sin",
   },
-]
+] 
 
 export default function ContactHero() {
   return (

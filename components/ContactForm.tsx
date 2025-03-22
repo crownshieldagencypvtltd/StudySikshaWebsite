@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -66,9 +65,7 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className="bg-white p-8 rounded-lg border border-gray-200 text-center"
       >
         <div className="flex justify-center mb-4">
@@ -81,15 +78,12 @@ export default function ContactForm() {
         <Button onClick={() => setIsSubmitted(false)} className="bg-brand-600 hover:bg-brand-700 text-white">
           Send Another Message
         </Button>
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+    <div
       className="bg-white p-8 rounded-lg border border-gray-200"
     >
       <h2 className="text-2xl font-bold mb-2 text-brand-800">Academic & Career Counselling Request</h2>
@@ -350,7 +344,7 @@ export default function ContactForm() {
           </Button>
         </form>
       </Form>
-    </motion.div>
+    </div>
   )
 }
 

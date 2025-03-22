@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo"
 
-import VortexDemo from "@/components/vortex-demo"
 import AppleCardsCarouselDemo from "@/components/apple-cards-carousel-demo"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Sparkles } from 'lucide-react'
@@ -118,9 +117,6 @@ export default function SuccessStoriesPage() {
                     </div>
                   </div>
                 </CardContent>
-                <CardFooter className="border-t bg-muted/10 flex justify-end">
-                  <Button variant="ghost" size="sm">Read Full Story</Button>
-                </CardFooter>
               </Card>
             ))}
           </div>
@@ -128,14 +124,9 @@ export default function SuccessStoriesPage() {
       </section>
 
       {/* Vortex Section with CTA */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <VortexDemo />
-        </div>
-      </section>
 
       {/* Success Pathways Carousel */}
-      <section className="py-20 bg-muted/30">
+      {/* <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Pathways</h2>
@@ -145,7 +136,7 @@ export default function SuccessStoriesPage() {
           </div>
           <AppleCardsCarouselDemo />
         </div>
-      </section>
+      </section> */}
 
       {/* Join Us CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">

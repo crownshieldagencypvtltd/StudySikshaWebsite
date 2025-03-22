@@ -30,7 +30,7 @@ export default function MechanicalServices() {
             <Tool className="w-6 h-6 text-gold-500" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Mechanical Services</h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <p className="text-xl text-black max-w-3xl mx-auto">
             Expert mechanical technicians providing comprehensive repair and maintenance services for all your equipment
             needs.
           </p>
@@ -56,7 +56,7 @@ export default function MechanicalServices() {
                 <div className="inline-block px-4 py-2 bg-gold-500 text-navy-950 font-semibold rounded-md mb-2">
                   Skilled Technicians
                 </div>
-                <h3 className="text-2xl font-bold text-white">Professional Mechanical Services</h3>
+                <h3 className="text-2xl font-bold text-black">Professional Mechanical Services</h3>
               </div>
             </div>
           </motion.div>
@@ -67,8 +67,8 @@ export default function MechanicalServices() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-2xl font-bold mb-6 text-white">Comprehensive Mechanical Solutions</h3>
-            <p className="text-white/70 mb-8">
+            <h3 className="text-2xl font-bold mb-6 text-black">Comprehensive Mechanical Solutions</h3>
+            <p className="text-black mb-8">
               Our mechanical services team consists of highly skilled technicians with expertise in various mechanical
               systems and equipment. We provide reliable solutions for industrial, commercial, and residential clients,
               ensuring optimal performance and longevity of your mechanical assets.
@@ -87,7 +87,7 @@ export default function MechanicalServices() {
                   <div className="mr-3 mt-1 bg-navy-800 rounded-full p-1">
                     <Check className="w-4 h-4 text-gold-500" />
                   </div>
-                  <span className="text-white/80">{service}</span>
+                  <span className="text-black">{service}</span>
                 </motion.div>
               ))}
             </div>

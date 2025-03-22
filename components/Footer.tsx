@@ -1,6 +1,6 @@
-import Link from "next/link"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
 import Image from "next/image"
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -74,16 +74,16 @@ export default function Footer() {
 
           {/* Study Destinations */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-brand-800">Study Destinations</h3>
+            <h3 className="text-lg font-semibold mb-6 text-brand-800">Top Study Destinations</h3>
             <ul className="space-y-3">
-              {["USA", "UK", "Canada", "Australia", "Germany", "Italy", "France", "Ireland"].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={`/destinations#${item.toLowerCase()}`}
-                    className="text-gray-600 hover:text-brand-600 transition-colors duration-300"
-                  >
-                    Study in {item}
-                  </Link>
+              {[
+                { title: "USA, Canada, UK, Australia", description: "Leading for quality education and work opportunities." },
+                { title: "Germany, New Zealand, Dubai", description: "Affordable with strong career prospects." },
+                { title: "Delhi, Mumbai, Bangalore", description: "Top for management, tech, and finance in India." },
+                { title: "Chennai, Hyderabad, Kolkata", description: "Known for engineering, biotech, and arts courses." }
+              ].map((item, index) => (
+                <li key={index} className="text-gray-600">
+                  <span className="font-medium text-brand-700">{item.title}</span> – {item.description}
                 </li>
               ))}
             </ul>
@@ -96,25 +96,25 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-brand-600 mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-600">
-                  Shiksha Yogya Pvt. Ltd., 123 Education Street, New Delhi, India 110001
+                  Shiksha Yogya Pvt. Ltd.,Kolkata - Dimond Harbour Road, New Alipore Kolkata 700038
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 text-brand-600 mr-3 flex-shrink-0" />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917319367046"
                   className="text-gray-600 hover:text-brand-600 transition-colors duration-300"
                 >
-                  +91 98765 43210
+                  +91 7319367046
                 </a>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 text-brand-600 mr-3 flex-shrink-0" />
                 <a
-                  href="mailto:info@shikshayogya.com"
+                  href="mailto:shikshayogya@gmail.com"
                   className="text-gray-600 hover:text-brand-600 transition-colors duration-300"
                 >
-                  info@shikshayogya.com
+                  shikshayogya@gmail.com
                 </a>
               </li>
             </ul>

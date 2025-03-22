@@ -90,11 +90,6 @@ const SuccessStoryCard = ({ story, index }: { story: (typeof successStories)[0];
           <p className="text-lg font-medium text-primary mb-4">{story.achievement}</p>
           <p className="text-muted-foreground">{story.description}</p>
         </CardContent>
-        <CardFooter>
-          <Button variant="outline" className="w-full">
-            Read Full Story
-          </Button>
-        </CardFooter>
       </Card>
     </motion.div>
   )

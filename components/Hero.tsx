@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const heroImages = [
   {
@@ -26,17 +26,17 @@ const heroImages = [
     alt: "Student with global landmarks",
     title: "Global Education",
   },
-]
+];
 
 export default function Hero() {
-  const [currentImage, setCurrentImage] = useState(0)
+  const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % heroImages.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -44,14 +44,15 @@ export default function Hero() {
       {heroImages.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${currentImage === index ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            currentImage === index ? "opacity-100" : "opacity-0"
+          }`}
         >
           <div className="absolute inset-0 bg-brand-gradient opacity-80 z-10" />
           <Image
             src={image.src || "/placeholder.svg"}
             alt={image.alt}
             fill
-
             className="object-cover"
             priority={index === 0}
             sizes="100vw"
@@ -74,11 +75,12 @@ export default function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white">
-            Your Gateway to <span className="text-brand-800">Global Education</span>
+            The Right Education{" "}
+            <span className="text-brand-800">for a Worthy Future </span>
           </h1>
 
           <p className="text-xl text-white mb-8">
-            Providing expert guidance for studying abroad in UK, USA, Canada, Australia, Europe and more.
+          Providing FREE career counseling, college admissions support, and study abroad guidance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -108,12 +110,14 @@ export default function Hero() {
             <button
               key={index}
               onClick={() => setCurrentImage(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${currentImage === index ? "bg-brand-600 w-8" : "bg-white/50"}`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                currentImage === index ? "bg-brand-600 w-8" : "bg-white/50"
+              }`}
               aria-label={`View ${heroImages[index].title}`}
             />
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

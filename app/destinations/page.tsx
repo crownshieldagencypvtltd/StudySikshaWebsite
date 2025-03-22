@@ -7,6 +7,7 @@ import SuccessStory from "@/components/SuccessStory"
 import CTASection from "@/components/CTASection"
 import { Spotlight } from "@/components/ui/spotlight-new"
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect"
+import { GraduationCap, DollarSign, Building, FlaskRoundIcon as Flask } from "lucide-react"
 
 export default function DestinationsPage() {
   const countries = [
@@ -35,6 +36,13 @@ export default function DestinationsPage() {
       name: "Australia",
       flag: "/placeholder.svg?height=40&width=60",
       description:
+        "Affordable with strong career prospects.",
+      learnMoreLink: "/destinations/australia",
+    },
+    {
+      name: "New Zealand",
+      flag: "/placeholder.svg?height=40&width=60",
+      description:
         "High-quality education with a relaxed lifestyle, excellent research facilities, and post-study work opportunities.",
       learnMoreLink: "/destinations/australia",
     },
@@ -46,18 +54,63 @@ export default function DestinationsPage() {
       learnMoreLink: "/destinations/germany",
     },
     {
-      name: "France",
+      name: "Delhi",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Excellent education system with affordable tuition fees and a rich cultural heritage in the heart of Europe.",
       learnMoreLink: "/destinations/france",
     },
     {
-      name: "Singapore",
+      name: "Mumbai",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Asia's education hub with world-class universities, multicultural environment, and excellent career opportunities.",
       learnMoreLink: "/destinations/singapore",
+    },
+    {
+      name: "Chennai",
+      flag: "/placeholder.svg?height=40&width=60",
+      description:
+        "Asia's education hub with world-class universities, multicultural environment, and excellent career opportunities.",
+      learnMoreLink: "/destinations/singapore",
+    },
+    {
+      name: "Bangalore",
+      flag: "/placeholder.svg?height=40&width=60",
+      description:
+        "Asia's education hub with world-class universities, multicultural environment, and excellent career opportunities.",
+      learnMoreLink: "/destinations/singapore",
+    },
+  ]
+
+  const topDestinations = [
+    {
+      category: "Leading for quality education and work opportunities",
+      icon: <GraduationCap className="h-6 w-6 text-purple-600" />,
+      emoji: "🌟",
+      destinations: ["USA", "Canada", "UK", "Australia"],
+      color: "bg-purple-100 border-purple-300",
+    },
+    {
+      category: "Affordable with strong career prospects",
+      icon: <DollarSign className="h-6 w-6 text-green-600" />,
+      emoji: "💰",
+      destinations: ["Germany", "New Zealand", "Dubai"],
+      color: "bg-green-100 border-green-300",
+    },
+    {
+      category: "Top for management, tech, and finance in India",
+      icon: <Building className="h-6 w-6 text-blue-600" />,
+      emoji: "🏢",
+      destinations: ["Delhi", "Mumbai", "Bangalore"],
+      color: "bg-blue-100 border-blue-300",
+    },
+    {
+      category: "Known for engineering, biotech, and arts courses",
+      icon: <Flask className="h-6 w-6 text-orange-600" />,
+      emoji: "🔬",
+      destinations: ["Chennai", "Hyderabad", "Kolkata"],
+      color: "bg-orange-100 border-orange-300",
     },
   ]
 
@@ -175,6 +228,43 @@ export default function DestinationsPage() {
           className="relative z-10 py-20"
         />
       </div>
+
+      {/* Top Study Destinations */}
+      <section className="py-16 px-4 md:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">🌍 Top Study Destinations</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Explore our curated selection of top study destinations categorized by their unique strengths and
+            opportunities
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {topDestinations.map((category, index) => (
+              <div
+                key={index}
+                className={`rounded-xl border-2 ${category.color} p-6 shadow-lg transition-all hover:shadow-xl`}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  {category.icon}
+                  <h3 className="text-xl font-bold">
+                    {category.emoji} {index + 1}. {category.category}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {category.destinations.map((destination, idx) => (
+                    <div key={idx} className="relative group">
+                      <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-500 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-200"></div>
+                      <button className="relative px-4 py-2 bg-white rounded-full shadow-sm font-medium text-gray-800 hover:text-purple-700 transition-all">
+                        {destination}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Popular Study Destinations */}
       <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
