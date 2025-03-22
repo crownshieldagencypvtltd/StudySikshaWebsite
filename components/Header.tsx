@@ -52,7 +52,7 @@ export default function Header() {
               height={50}
               className="mr-2"
             />
-            <span className="text-xl font-bold text-brand-800 hidden md:inline-block">Shiksha Yogya PVT. Ltd</span>
+            <span className="text-xl font-bold text-brand-800 hidden md:inline-block">Shiksha Yogya Pvt. Ltd</span>
           </Link>
 
           {/* Desktop Navigation */}
