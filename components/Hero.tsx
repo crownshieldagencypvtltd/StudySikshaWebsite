@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -28,7 +28,7 @@ const heroImages = [
   },
 ];
 
-export default function Hero() {
+const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -80,7 +80,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl text-white mb-8">
-          Providing FREE career counseling, college admissions support, and study abroad guidance.
+            Providing FREE career counseling, college admissions support, and
+            study abroad guidance.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -120,4 +121,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default memo(Hero);
