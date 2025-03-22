@@ -8,8 +8,8 @@ import CallToAction from "@/components/CallToAction";
 import FaqSection from "@/components/FaqSection";
 import WorldMapDemo from "@/components/world-map-demo";
 
-const WobbleCardDemo = dynamic(() => import("@/components/wobble-card-demo"), { ssr: true });
-const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: true });
+const WobbleCardDemo = dynamic(() => import("@/components/wobble-card-demo"), { ssr: false });
+const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: false });
 const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"), { ssr: false });
 
 export default function Home() {
