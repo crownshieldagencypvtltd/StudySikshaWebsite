@@ -2,15 +2,15 @@
 import Hero from "@/components/Hero";
 import ServicesOverview from "@/components/ServicesOverview";
 import dynamic from "next/dynamic";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import Stats from "@/components/Stats";
 import CallToAction from "@/components/CallToAction";
 import FaqSection from "@/components/FaqSection";
 import WorldMapDemo from "@/components/world-map-demo";
 
-const WobbleCardDemo = dynamic(() => import("@/components/wobble-card-demo"), { ssr: false });
+const WobbleCardDemo = dynamic(() => import("@/components/wobble-card-demo"), { ssr: true });
 const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), { ssr: true });
+const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"), { ssr: false });
 
 export default function Home() {
   return (
