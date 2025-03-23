@@ -41,7 +41,7 @@ const successStories = [
   },
   {
     id: 4,
-    name: "Rajiv Kumar",
+    name: "Shivam Shah ",
     emoji: "🚀",
     achievement: "Started a successful tech startup after completing our entrepreneurship program!",
     description:
@@ -50,7 +50,7 @@ const successStories = [
   },
   {
     id: 5,
-    name: "Priya Patel",
+    name: "Anuska Sain",
     emoji: "🏆",
     achievement: "Won the National Coding Championship representing our institute!",
     description:

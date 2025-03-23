@@ -7,22 +7,22 @@ import { Button } from "@/components/ui/button";
 
 const heroImages = [
   {
-    src: "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "https://i.pinimg.com/736x/0f/41/48/0f41481afda9b19fb8b9ba68bcb38b07.jpg",
     alt: "Graduate student with diploma",
     title: "Study Abroad",
   },
   {
-    src: "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "https://i.pinimg.com/736x/65/2a/75/652a75f2f15af37a7a13dc57ded22239.jpg",
     alt: "Student in Italy with Leaning Tower of Pisa",
     title: "Study in Italy",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-15%20at%2022.43.16_12882850.jpg-X98ascXl0M0gGloHthYQGGxGdMHgwT.jpeg",
+    src: "https://i.pinimg.com/736x/2d/fd/ca/2dfdcad05376a566408cb2cca791e16f.jpg",
     alt: "Graduation ceremony with caps thrown in air",
     title: "Success Stories",
   },
   {
-    src: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=600",
+    src: "https://i.pinimg.com/736x/cc/f2/79/ccf279dded6295128f0300a02e581d3d.jpg",
     alt: "Student with global landmarks",
     title: "Global Education",
   },

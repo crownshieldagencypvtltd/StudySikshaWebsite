@@ -22,14 +22,14 @@ const services = [
     title: "Course Selection",
     description: "Helping students choose the right course based on their interests, skills, and future career goals.",
     // TODO HRE THERE IS THE LINK ERROR
-    link: "/services#courses",
+    link: "/services#course-selection",
   },
   {
     icon: <Building className="w-12 h-12 text-brand-600" />,
     title: "Scholarships & Loans",
     description: "Support in identifying and applying for scholarships, along with guidance on securing education loans.",
     // TODO HRE THERE IS THE LINK ERROR
-    link: "/services#scholarships",
+    link: "/services#scholarship",
   },
   {
     icon: <Globe className="w-12 h-12 text-brand-600" />,

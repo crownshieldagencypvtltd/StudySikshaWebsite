@@ -10,7 +10,7 @@ export default function ServiceHero() {
       <div className="absolute inset-0 bg-brand-gradient opacity-80 z-10" />
       <div className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src="https://i.pinimg.com/736x/2f/54/bb/2f54bbfc53cd40fcc71ad9b191c30ec0.jpg"
           alt="Student with global landmarks"
           fill
           className="object-cover"

@@ -26,6 +26,28 @@ const leaders = [
       linkedin: "https://linkedin.com/in/priya-sharma",
     },
   },
+  {
+    name: "Amit Patel",
+    position: "Head of Visa Services",
+    image: "/placeholder.svg?height=400&width=400",
+    bio: "A visa expert with extensive knowledge of immigration policies, Amit ensures high success rates for student visa applications.",
+    contact: {
+      email: "shikshayogya@gmail.com",
+      phone: "+91 8653024437",
+      linkedin: "https://linkedin.com/in/amit-patel",
+    },
+  },
+  {
+    name: "Meera Singh",
+    position: "Career Counseling Head",
+    image: "/placeholder.svg?height=400&width=400",
+    bio: "Meera specializes in helping students identify the right courses and universities aligned with their career goals.",
+    contact: {
+      email: "shikshayogya@gmail.com",
+      phone: "+91 8653024437",
+      linkedin: "https://linkedin.com/in/meera-singh",
+    },
+  },
 ]
 
 export default function Leadership() {

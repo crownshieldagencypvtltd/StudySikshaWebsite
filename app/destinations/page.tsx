@@ -1,13 +1,13 @@
 "use client"
-import HeroSection from "@/components/HeroSection"
 import CountryCard from "@/components/CountryCard"
-import WhyStudyAbroad from "@/components/WhyStudyAbroad"
+import CTASection from "@/components/CTASection"
+import HeroSection from "@/components/HeroSection"
 import ProcessTimeline from "@/components/ProcessTimeline"
 import SuccessStory from "@/components/SuccessStory"
-import CTASection from "@/components/CTASection"
 import { Spotlight } from "@/components/ui/spotlight-new"
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect"
-import { GraduationCap, DollarSign, Building, FlaskRoundIcon as Flask } from "lucide-react"
+import WhyStudyAbroad from "@/components/WhyStudyAbroad"
+import { Building, DollarSign, FlaskRoundIcon as Flask, GraduationCap } from "lucide-react"
 
 export default function DestinationsPage() {
   const countries = [
@@ -167,7 +167,7 @@ export default function DestinationsPage() {
 
   const successStories = [
     {
-      name: "Priya Sharma",
+      name: "Anuska Sain ",
       photo: "/placeholder.svg?height=200&width=200",
       achievement: "Secured full scholarship at MIT for Computer Science",
       testimonial:

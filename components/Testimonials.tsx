@@ -1,12 +1,12 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { AnimatePresence, motion, useInView } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
-import { motion, AnimatePresence, useInView } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Anuska Sain ",
     position: "Studying at University of Toronto",
     content:
       "Shiksha Yogya made my dream of studying in Canada come true. Their counselors guided me through every step of the application and visa process. I'm now pursuing my Master's degree at the University of Toronto!",
