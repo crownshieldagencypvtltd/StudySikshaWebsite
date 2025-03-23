@@ -25,7 +25,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/16CmJ6yHvK/"
                 className="bg-gray-100 hover:bg-gray-200 text-brand-600 p-2 rounded-full transition-colors duration-300"
                 aria-label="Facebook"
               >
@@ -39,7 +39,7 @@ export default function Footer() {
                 <Twitter size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/shikshayogya?igsh=MWl5Z3plM3RlMTdsMA=="
                 className="bg-gray-100 hover:bg-gray-200 text-brand-600 p-2 rounded-full transition-colors duration-300"
                 aria-label="Instagram"
               >
