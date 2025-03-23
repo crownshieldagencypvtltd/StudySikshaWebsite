@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { ChevronDown } from "lucide-react"
+import { motion, AnimatePresence, useInView } from "framer-motion"
 
 const faqs = [
   {
@@ -33,28 +34,48 @@ const faqs = [
 
 export default function FaqSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   const toggleFaq = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index)
   }
 
   return (
-    <section className="py-20 brand-gradient-bg">
+    <section ref={ref} className="py-20 bg-gradient-to-b from-brand-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-800">Frequently Asked Questions</h2>
           <p className="text-xl text-brand-700 max-w-3xl mx-auto">
             Find answers to common questions about our services and the study abroad process.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <motion.div
+          className="max-w-3xl mx-auto"
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           {faqs.map((faq, index) => (
-            <div key={index} className="mb-4">
+            <motion.div
+              key={index}
+              className="mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+            >
               <button
                 onClick={() => toggleFaq(index)}
                 className={`w-full text-left p-6 rounded-lg flex justify-between items-center transition-all duration-300 ${
-                  activeIndex === index ? "bg-white border-brand-500" : "bg-white/80 hover:bg-white border-gray-200"
+                  activeIndex === index
+                    ? "bg-white shadow-md border-brand-500"
+                    : "bg-white/80 hover:bg-white border-gray-200"
                 } border`}
               >
                 <span className="font-semibold text-lg text-brand-800">{faq.question}</span>
@@ -62,17 +83,26 @@ export default function FaqSection() {
                   className={`w-5 h-5 text-brand-600 transition-transform duration-300 ${activeIndex === index ? "transform rotate-180" : ""}`}
                 />
               </button>
-              {activeIndex === index && (
-                <div className="overflow-hidden">
-                  <div className="p-6 bg-white/50 rounded-b-lg border border-t-0 border-gray-200">
-                    <p className="text-gray-700">{faq.answer}</p>
-                  </div>
-                </div>
-              )}
-            </div>
+              <AnimatePresence>
+                {activeIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-6 bg-white/50 rounded-b-lg border border-t-0 border-gray-200">
+                      <p className="text-gray-700">{faq.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
 }
+

@@ -72,9 +72,9 @@ export default function Home() {
       )}
 
       {/* Load map component only when needed */}
-      <Suspense fallback={<div className="min-h-[300px] flex items-center justify-center">Loading map...</div>}>
+      {/* <Suspense fallback={<div className="min-h-[300px] flex items-center justify-center">Loading map...</div>}>
         <WorldMapDemo />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<div className="min-h-[150px] flex items-center justify-center">Loading FAQs...</div>}>
         <FaqSection />

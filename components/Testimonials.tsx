@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { motion, AnimatePresence, useInView } from "framer-motion"
 
 const testimonials = [
   {
@@ -41,6 +42,18 @@ const testimonials = [
 export default function Testimonials() {
   const [current, setCurrent] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: false, amount: 0.3 })
+
+  // Pause autoplay when not in view to save resources
+  useEffect(() => {
+    if (!isInView) {
+      setAutoplay(false)
+      return
+    }
+
+    setAutoplay(true)
+  }, [isInView])
 
   useEffect(() => {
     if (!autoplay) return
@@ -63,46 +76,53 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section ref={ref} className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-800">What Our Students Say</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from students who have successfully achieved their study abroad dreams with Shiksha Yogya.
           </p>
-        </div>
+        </motion.div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${current * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-gray-50 rounded-lg p-8 border border-gray-100">
-                    <div className="flex mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-5 h-5 ${i < testimonial.rating ? "text-brand-500 fill-brand-500" : "text-gray-400"}`}
-                        />
-                      ))}
+          <div className="overflow-hidden rounded-lg">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="w-full"
+              >
+                <div className="bg-gradient-to-r from-brand-50 to-white rounded-lg p-8 border border-gray-100 shadow-sm">
+                  <div className="flex mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className={`w-5 h-5 ${i < testimonials[current].rating ? "text-brand-500 fill-brand-500" : "text-gray-400"}`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 text-lg italic mb-6">"{testimonials[current].content}"</p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-brand-200 rounded-full mr-4 flex items-center justify-center text-brand-700 font-bold">
+                      {testimonials[current].name.charAt(0)}
                     </div>
-                    <p className="text-gray-700 text-lg italic mb-6">"{testimonial.content}"</p>
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-brand-200 rounded-full mr-4 flex items-center justify-center text-brand-700 font-bold">
-                        {testimonial.name.charAt(0)}
-                      </div>
-                      <div>
-                        <p className="font-semibold text-brand-800">{testimonial.name}</p>
-                        <p className="text-gray-500 text-sm">{testimonial.position}</p>
-                      </div>
+                    <div>
+                      <p className="font-semibold text-brand-800">{testimonials[current].name}</p>
+                      <p className="text-gray-500 text-sm">{testimonials[current].position}</p>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
           <button
@@ -140,3 +160,4 @@ export default function Testimonials() {
     </section>
   )
 }
+
