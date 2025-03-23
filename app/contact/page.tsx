@@ -14,7 +14,7 @@ export default function ContactPage() {
           <ContactInfo />
         </div>
       </div>
-      <WorldMapDemo />
+      {/* <WorldMapDemo /> */}
     </>
   )
 }
