@@ -1,44 +1,87 @@
-"use client";
-import Hero from "@/components/Hero";
-import ServicesOverview from "@/components/ServicesOverview";
-import dynamic from "next/dynamic";
+"use client"
+import Hero from "@/components/Hero"
+import ServicesOverview from "@/components/ServicesOverview"
+import dynamic from "next/dynamic"
 import { Suspense } from "react"
+import { useIsMobile } from "@/hooks/use-mobile"
 
-const StudyDestinations = dynamic(
-  () => import("@/components/StudyDestinations"),
-  { ssr: true }
-);
+// Critical components loaded immediately
+const StudyDestinations = dynamic(() => import("@/components/StudyDestinations"), {
+  loading: () => <div className="min-h-[200px] flex items-center justify-center">Loading destinations...</div>,
+})
+
+// Non-critical components with improved loading strategy
 const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"), {
-  ssr: true,
-});
-const Stats = dynamic(() => import("@/components/Stats"), { ssr: true });
+  loading: () => <div className="min-h-[150px] flex items-center justify-center">Loading...</div>,
+})
+
+const Stats = dynamic(() => import("@/components/Stats"), {
+  loading: () => <div className="min-h-[100px] flex items-center justify-center">Loading stats...</div>,
+})
+
+// Components that can be deferred until needed
 const Testimonials = dynamic(() => import("@/components/Testimonials"), {
-  ssr: true,
-});
+  ssr: false, // Disable SSR for this non-critical component
+  loading: () => <div className="min-h-[200px] flex items-center justify-center">Loading testimonials...</div>,
+})
+
 const WorldMapDemo = dynamic(() => import("@/components/world-map-demo"), {
-  ssr: true,
-});
+  ssr: false, // Maps are typically heavy, load client-side only
+  loading: () => <div className="min-h-[300px] flex items-center justify-center">Loading map...</div>,
+})
+
 const FaqSection = dynamic(() => import("@/components/FaqSection"), {
-  ssr: true,
-});
+  loading: () => <div className="min-h-[150px] flex items-center justify-center">Loading FAQs...</div>,
+})
+
 const CallToAction = dynamic(() => import("@/components/CallToAction"), {
-  ssr: true,
-});
+  loading: () => <div className="min-h-[100px] flex items-center justify-center">Loading...</div>,
+})
 
 export default function Home() {
+  const isMobile = useIsMobile()
+
   return (
     <>
       <Hero />
       <ServicesOverview />
-      <Suspense fallback={<div>Loading...</div>}>
-      <StudyDestinations />
-      <WhyChooseUs />
-      <Stats />
+
+      <Suspense
+        fallback={<div className="min-h-[200px] flex items-center justify-center">Loading destinations...</div>}
+      >
+        <StudyDestinations />
       </Suspense>
-      <Testimonials />
-      <WorldMapDemo />
-      <FaqSection />
+
+      <Suspense fallback={<div className="min-h-[150px] flex items-center justify-center">Loading...</div>}>
+        <WhyChooseUs />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[100px] flex items-center justify-center">Loading stats...</div>}>
+        <Stats />
+      </Suspense>
+
+      {/* Defer loading of less critical components */}
+      {!isMobile ? (
+        <Testimonials />
+      ) : (
+        <Suspense
+          fallback={<div className="min-h-[200px] flex items-center justify-center">Loading testimonials...</div>}
+        >
+          <Testimonials />
+        </Suspense>
+      )}
+
+      {/* Load map component only when needed */}
+      <Suspense fallback={<div className="min-h-[300px] flex items-center justify-center">Loading map...</div>}>
+        <WorldMapDemo />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[150px] flex items-center justify-center">Loading FAQs...</div>}>
+        <FaqSection />
+      </Suspense>
+
       <CallToAction />
     </>
-  );
+  )
 }
+
