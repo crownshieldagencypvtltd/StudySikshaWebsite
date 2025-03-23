@@ -21,12 +21,14 @@ const services = [
     icon: <FileText className="w-12 h-12 text-brand-600" />,
     title: "Course Selection",
     description: "Helping students choose the right course based on their interests, skills, and future career goals.",
+    // TODO HRE THERE IS THE LINK ERROR
     link: "/services#courses",
   },
   {
     icon: <Building className="w-12 h-12 text-brand-600" />,
     title: "Scholarships & Loans",
     description: "Support in identifying and applying for scholarships, along with guidance on securing education loans.",
+    // TODO HRE THERE IS THE LINK ERROR
     link: "/services#scholarships",
   },
   {
@@ -36,6 +38,7 @@ const services = [
     link: "/services#study-abroad",
   },
   {
+        // TODO CHANGE THE ICON
     icon: <Plane className="w-12 h-12 text-brand-600" />,
     title: "Exam Preparation",
     description: "Coaching referrals and personalized study plans for exams like JEE, NEET, IELTS, TOEFL, GRE, GMAT, CAT, and more.",
@@ -95,7 +98,7 @@ export default function ServicesOverview() {
             size="lg"
             className="bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-md transition-all duration-300 transform hover:scale-105"
           >
-            <Link href="/services">Explore All Swinervices</Link>
+            <Link href="/services">Explore All Services</Link>
           </Button>
         </div>
       </div>
