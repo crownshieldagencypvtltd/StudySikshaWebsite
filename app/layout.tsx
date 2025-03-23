@@ -16,7 +16,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Shiksha Yogya | The Right Education for a Worthy Future",
   description:
-    "Your trusted partner for overseas education consultancy - Study in UK, USA, Canada, Australia, Europe and more.",
+    "Your trusted partner for overseas education - Study in UK, USA, Canada, Australia, Europe and more.",
   generator: "deveyes.com",
   keywords: [
     "education consultancy",

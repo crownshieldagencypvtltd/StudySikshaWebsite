@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-brand-800">Shiksha Yogya</span>
             </Link>
             <p className="text-gray-600 mb-6">
-              Your trusted partner for overseas education consultancy, providing expert guidance for studying abroad in
+              Your trusted partner for overseas education providing expert guidance for studying abroad in
               prestigious universities worldwide.
             </p>
             <div className="flex space-x-4">
@@ -96,7 +96,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 text-brand-600 mr-3 mt-1 flex-shrink-0" />
                 <span className="text-gray-600">
-                  Shiksha Yogya Pvt. Ltd.,Kolkata - Dimond Harbour Road, New Alipore Kolkata 700038
+                  Shiksha Yogya Pvt. Ltd. Diamond Harbour Road, New Alipore Kolkata 700038
                 </span>
               </li>
               <li className="flex items-center">

@@ -8,7 +8,7 @@ const faqs = [
   {
     question: "What services does Shiksha Yogya provide?",
     answer:
-      "Shiksha Yogya offers comprehensive education consultancy services including university admissions, visa assistance, study abroad programs, scholarship guidance, career counseling, and pre-departure orientation for students looking to study overseas.",
+      "Shiksha Yogya offers comprehensive education services including university admissions, visa assistance, study abroad programs, scholarship guidance, career counseling, and pre-departure orientation for students looking to study overseas.",
   },
   {
     question: "Which countries can I study in through Shiksha Yogya?",

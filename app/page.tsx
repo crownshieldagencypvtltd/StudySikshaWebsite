@@ -45,12 +45,12 @@ export default function Home() {
     <>
       <Hero />
       <ServicesOverview />
-
+{/* 
       <Suspense
         fallback={<div className="min-h-[200px] flex items-center justify-center">Loading destinations...</div>}
       >
         <StudyDestinations />
-      </Suspense>
+      </Suspense> */}
 
       <Suspense fallback={<div className="min-h-[150px] flex items-center justify-center">Loading...</div>}>
         <WhyChooseUs />
