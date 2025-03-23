@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/timeline"
 export default function TimelineDemo() {
   const data = [
     {
-      title: "2013",
+      title: "2020",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -31,7 +31,7 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "2017",
+      title: "2023",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -61,7 +61,7 @@ export default function TimelineDemo() {
       ),
     },
     {
-      title: "2023",
+      title: "2025",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
