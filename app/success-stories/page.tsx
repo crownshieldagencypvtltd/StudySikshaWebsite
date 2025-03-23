@@ -1,51 +1,62 @@
-"use client"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo"
+"use client";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import AnimatedTestimonialsDemo from "@/components/animated-testimonials-demo";
 
-import AppleCardsCarouselDemo from "@/components/apple-cards-carousel-demo"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Sparkles } from 'lucide-react'
+import AppleCardsCarouselDemo from "@/components/apple-cards-carousel-demo";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function SuccessStoriesPage() {
   const successStories = [
     {
-      quote: "Admitted to Delhi University with 100% Scholarship! The program's guidance was instrumental in helping me achieve my academic goals.",
+      quote:
+        "Admitted to Delhi University with 100% Scholarship! The program's guidance was instrumental in helping me achieve my academic goals.",
       name: "Ananya Sharma",
       designation: "Delhi University Scholar",
       src: "/placeholder.svg?height=500&width=500",
-      emoji: "🎓"
+      emoji: "🎓",
     },
     {
-      quote: "Placed in a top MNC after completing the internship program! The skills I gained gave me a competitive edge in the job market.",
+      quote:
+        "Placed in a top MNC after completing the internship program! The skills I gained gave me a competitive edge in the job market.",
       name: "Rohan Gupta",
       designation: "Software Engineer at TechCorp",
       src: "/placeholder.svg?height=500&width=500",
-      emoji: "🎓"
+      emoji: "🎓",
     },
     {
-      quote: "Secured admission to Canada for higher studies! The mentorship and application support made all the difference in my journey.",
+      quote:
+        "Secured admission to Canada for higher studies! The mentorship and application support made all the difference in my journey.",
       name: "Megha Verma",
       designation: "International Student, Canada",
       src: "/placeholder.svg?height=500&width=500",
-      emoji: "🎓"
+      emoji: "🎓",
     },
     {
-      quote: "Received a full-ride scholarship to my dream university! I couldn't have done it without the dedicated support from the team.",
+      quote:
+        "Received a full-ride scholarship to my dream university! I couldn't have done it without the dedicated support from the team.",
       name: "Arjun Patel",
       designation: "Engineering Student",
       src: "/placeholder.svg?height=500&width=500",
-      emoji: "🎓"
+      emoji: "🎓",
     },
     {
-      quote: "Successfully transitioned to a new career in tech after completing the certification program. It changed my life!",
+      quote:
+        "Successfully transitioned to a new career in tech after completing the certification program. It changed my life!",
       name: "Priya Singh",
       designation: "UX Designer",
       src: "/placeholder.svg?height=500&width=500",
-      emoji: "🎓"
+      emoji: "🎓",
     },
-  ]
-
+  ];
+  const router = useRouter();
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero Section with Background Beams */}
@@ -74,9 +85,12 @@ export default function SuccessStoriesPage() {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Hear From Our Achievers</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Hear From Our Achievers
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Real stories from real students who transformed their dreams into reality with our guidance.
+              Real stories from real students who transformed their dreams into
+              reality with our guidance.
             </p>
           </div>
           <AnimatedTestimonialsDemo />
@@ -87,20 +101,28 @@ export default function SuccessStoriesPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Recent Success Stories</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Recent Success Stories
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Join our growing community of successful students and alumni.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-              <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <Card
+                key={index}
+                className="overflow-hidden transition-all duration-300 hover:shadow-lg"
+              >
                 <CardHeader className="bg-primary/5 pb-2">
                   <div className="flex items-center justify-between">
                     <Badge variant="outline" className="text-lg px-3 py-1">
                       {story.emoji}
                     </Badge>
-                    <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                    <Badge
+                      variant="secondary"
+                      className="bg-primary/10 text-primary hover:bg-primary/20"
+                    >
                       Success Story
                     </Badge>
                   </div>
@@ -113,7 +135,9 @@ export default function SuccessStoriesPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold">{story.name}</h4>
-                      <p className="text-sm text-muted-foreground">{story.designation}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {story.designation}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -141,20 +165,40 @@ export default function SuccessStoriesPage() {
       {/* Join Us CTA Section */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Write Your Success Story?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Write Your Success Story?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Join our program today and take the first step towards achieving your dreams.
+            Join our program today and take the first step towards achieving
+            your dreams.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="rounded-full px-8">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="rounded-full px-8"
+              onClick={() => {
+                router.push("services");
+              }}
+            >
               Explore Programs
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 bg-transparent border-primary-foreground/20 hover:bg-primary-foreground/10">
-              Contact an Advisor
-            </Button>
+            <a
+              href="https://wa.me/7319367046"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-full px-8 bg-transparent border-primary-foreground/20 hover:bg-primary-foreground/10"
+              >
+                Contact an Advisor
+              </Button>
+            </a>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }

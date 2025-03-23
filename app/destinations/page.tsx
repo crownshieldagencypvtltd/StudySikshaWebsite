@@ -321,7 +321,7 @@ export default function DestinationsPage() {
         heading="Start Your Study Abroad Journey Today!"
         subtext="Book a free consultation with our experts and take the first step toward your global education."
         ctaText="Book a Free Consultation"
-        ctaLink="/consultation"
+        ctaLink="https://wa.me/7319367046"
       />
     </div>
   )

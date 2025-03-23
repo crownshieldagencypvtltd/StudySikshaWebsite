@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button";
 
 const heroImages = [
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-15%20at%2022.43.15_2b14d1ae.jpg-vwNAyRUKopMthgqGB1uJnjsJXeyXIF.jpeg",
+    src: "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     alt: "Graduate student with diploma",
     title: "Study Abroad",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-15%20at%2022.43.15_a9007c31.jpg-UVu45iVwPh1LoIWzYZupp2ofgLHHYm.jpeg",
+    src: "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     alt: "Student in Italy with Leaning Tower of Pisa",
     title: "Study in Italy",
   },
@@ -22,7 +22,7 @@ const heroImages = [
     title: "Success Stories",
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-03-15%20at%2022.43.16_de0a15c9.jpg-59Uj8eywsTsgalkMXLuJ5YoQlwr1yD.jpeg",
+    src: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=600",
     alt: "Student with global landmarks",
     title: "Global Education",
   },

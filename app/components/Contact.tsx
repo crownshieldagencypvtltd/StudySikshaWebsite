@@ -81,7 +81,6 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* TODO : MAKE IT RESPONSIVE  */}
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(handleSubmit)}

@@ -5,47 +5,25 @@ import { Linkedin, Mail, Phone } from "lucide-react"
 
 const leaders = [
   {
-    name: "Rajiv Kumar",
-    position: "Chief Executive Officer",
+    name: "Shivam Shah",
+    position: "Managing Director",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "With over 15 years of experience in international education, Rajiv leads Shiksha Yogya with a vision for excellence and innovation.",
+    bio: "With over 5 years of experience in international education, Rajiv leads Shiksha Yogya with a vision for excellence and innovation.",
     contact: {
-      email: "rajiv.kumar@shikshayogya.com",
-      phone: "+91 7319367046",
+      email: "shikshayogya@gmail.com",
+      phone: "+91 8653024437",
       linkedin: "https://linkedin.com/in/rajiv-kumar",
     },
   },
   {
-    name: "Priya Sharma",
+    name: "Anuska Sain",
     position: "Director of Admissions",
     image: "/placeholder.svg?height=400&width=400",
     bio: "Priya oversees all university admissions processes, ensuring students secure placements in top institutions worldwide.",
     contact: {
-      email: "priya.sharma@shikshayogya.com",
-      phone: "+91 98765 43211",
+      email: "shikshayogya@gmail.com",
+      phone: "+91 8653024437",
       linkedin: "https://linkedin.com/in/priya-sharma",
-    },
-  },
-  {
-    name: "Amit Patel",
-    position: "Head of Visa Services",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "A visa expert with extensive knowledge of immigration policies, Amit ensures high success rates for student visa applications.",
-    contact: {
-      email: "amit.patel@shikshayogya.com",
-      phone: "+91 98765 43212",
-      linkedin: "https://linkedin.com/in/amit-patel",
-    },
-  },
-  {
-    name: "Meera Singh",
-    position: "Career Counseling Head",
-    image: "/placeholder.svg?height=400&width=400",
-    bio: "Meera specializes in helping students identify the right courses and universities aligned with their career goals.",
-    contact: {
-      email: "meera.singh@shikshayogya.com",
-      phone: "+91 98765 43213",
-      linkedin: "https://linkedin.com/in/meera-singh",
     },
   },
 ]
@@ -100,15 +78,6 @@ export default function Leadership() {
                     aria-label={`Call ${leader.name}`}
                   >
                     <Phone className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={leader.contact.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
-                    aria-label={`${leader.name}'s LinkedIn profile`}
-                  >
-                    <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
               </div>
