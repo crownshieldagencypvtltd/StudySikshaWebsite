@@ -28,7 +28,7 @@ export default function AboutHero() {
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">About Shiksha Yogya</h1>
           <p className="text-xl text-white/80">
-            Guiding students towards global education excellence with integrity, expertise, and dedication since 2013.
+            Guiding students towards global education excellence with integrity, expertise, and dedication since 2020.
           </p>
         </motion.div>
       </div>
