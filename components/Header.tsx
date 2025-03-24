@@ -31,7 +31,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about-us" },
     { name: "Services", href: "/services" },
-    { name: "Study Destinations", href: "/destinations" },
+    { name: "Study Destinations", href: "/study-destinations" },
     { name: "Success Stories", href: "/success-stories" },
     { name: "Contact", href: "/contact" },
   ]

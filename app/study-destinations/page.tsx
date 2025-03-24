@@ -16,70 +16,70 @@ export default function DestinationsPage() {
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Home to world-renowned universities like Harvard, MIT, and Stanford with diverse programs and research opportunities.",
-      learnMoreLink: "/destinations/usa",
+      learnMoreLink: "/study-destinations/usa",
     },
     {
       name: "Canada",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Known for quality education, affordable tuition, and post-graduation work permits with a welcoming environment for international students.",
-      learnMoreLink: "/destinations/canada",
+      learnMoreLink: "/study-destinations/canada",
     },
     {
       name: "UK",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Prestigious institutions like Oxford and Cambridge offering shorter duration courses and rich cultural experiences.",
-      learnMoreLink: "/destinations/uk",
+      learnMoreLink: "/study-destinations/uk",
     },
     {
       name: "Australia",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Affordable with strong career prospects.",
-      learnMoreLink: "/destinations/australia",
+      learnMoreLink: "/study-destinations/australia",
     },
     {
       name: "New Zealand",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "High-quality education with a relaxed lifestyle, excellent research facilities, and post-study work opportunities.",
-      learnMoreLink: "/destinations/australia",
+      learnMoreLink: "/study-destinations/australia",
     },
     {
       name: "Germany",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Tuition-free public universities with strong engineering and technical programs in Europe's strongest economy.",
-      learnMoreLink: "/destinations/germany",
+      learnMoreLink: "/study-destinations/germany",
     },
     {
       name: "Delhi",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Excellent education system with affordable tuition fees and a rich cultural heritage in the heart of Europe.",
-      learnMoreLink: "/destinations/france",
+      learnMoreLink: "/study-destinations/france",
     },
     {
       name: "Mumbai",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Asia's education hub with world-class universities, multicultural environment, and excellent career opportunities.",
-      learnMoreLink: "/destinations/singapore",
+      learnMoreLink: "/study-destinations/singapore",
     },
     {
       name: "Chennai",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Asia's education hub with world-class universities, multicultural environment, and excellent career opportunities.",
-      learnMoreLink: "/destinations/singapore",
+      learnMoreLink: "/study-destinations/singapore",
     },
     {
       name: "Bangalore",
       flag: "/placeholder.svg?height=40&width=60",
       description:
         "Asia's education hub with world-class universities, multicultural environment, and excellent career opportunities.",
-      learnMoreLink: "/destinations/singapore",
+      learnMoreLink: "/study-destinations/singapore",
     },
   ]
 
@@ -224,8 +224,9 @@ export default function DestinationsPage() {
           }
           subtext=""
           ctaText="Get Free Consultation"
-          ctaLink="/consultation"
+          ctaLink="https://wa.me/7319367046"
           className="relative z-10 py-20"
+          
         />
       </div>
 

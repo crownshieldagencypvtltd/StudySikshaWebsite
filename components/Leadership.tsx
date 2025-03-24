@@ -8,7 +8,7 @@ const leaders = [
     name: "Shivam Shah",
     position: "Managing Director",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "With over 5 years of experience in international education, Rajiv leads Shiksha Yogya with a vision for excellence and innovation.",
+    bio: "With over 5 years of experience in international education, Shivam leads Shiksha Yogya with a vision for excellence and innovation.",
     contact: {
       email: "shikshayogya@gmail.com",
       phone: "+91 8653024437",
@@ -19,7 +19,7 @@ const leaders = [
     name: "Anuska Sain",
     position: "Director of Admissions",
     image: "/placeholder.svg?height=400&width=400",
-    bio: "Priya oversees all university admissions processes, ensuring students secure placements in top institutions worldwide.",
+    bio: "Anuska oversees all university admissions processes, ensuring students secure placements in top institutions worldwide.",
     contact: {
       email: "shikshayogya@gmail.com",
       phone: "+91 8653024437",

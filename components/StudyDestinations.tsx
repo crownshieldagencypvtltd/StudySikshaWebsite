@@ -151,7 +151,7 @@ export default function StudyDestinations() {
             asChild
             className="bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-md transition-all duration-300"
           >
-            <Link href="/destinations">View All Destinations</Link>
+            <Link href="/study-destinations">View All Destinations</Link>
           </Button>
         </motion.div>
       </div>
