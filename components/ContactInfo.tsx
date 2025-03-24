@@ -25,7 +25,7 @@ export default function ContactInfo() {
             </a>
           </li>
           <li className="flex items-start">
-            <MapPin className="w-5 h-5 text-brand-600 mr-3 mt-1" />
+            <MapPin className="w-10 h-12 sm:w-6 sm:h-6 text-brand-600 mr-3 mt-1 " />
             <span className="text-gray-600">
               Shiksha Yogya Pvt. Ltd., Dimond Harbour Road, New Alipore Kolkata 700038
             </span>
