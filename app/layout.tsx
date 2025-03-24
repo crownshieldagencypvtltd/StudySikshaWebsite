@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shiksha Yogya | The Right Education for a Worthy Future",
     description:
-      "Your trusted partner for overseas education consultancy - Study in UK, USA, Canada, Australia, Europe and more.",
+      "Your trusted partner for overseas education providing expert guidance for studying abroad in prestigious universities worldwide.",
     url: "https://www.shikshayogya.com",
     siteName: "Shiksha Yogya",
     type: "website",
