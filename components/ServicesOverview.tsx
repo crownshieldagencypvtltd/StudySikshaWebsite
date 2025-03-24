@@ -38,7 +38,6 @@ const services = [
     link: "/services#study-abroad",
   },
   {
-        // TODO CHANGE THE ICON
     icon: <Book className="w-12 h-12 text-brand-600" />,
     title: "Exam Preparation",
     description: "Coaching referrals and personalized study plans for exams like JEE, NEET, IELTS, TOEFL, GRE, GMAT, CAT, and more.",
