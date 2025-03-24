@@ -1,6 +1,6 @@
 "use client"
 
-import { GraduationCap, Globe, FileText, Building, Book, Users } from "lucide-react"
+import { GraduationCap, Globe, FileText, Building, BookOpenText, Users } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -38,7 +38,7 @@ const services = [
     link: "/services#study-abroad",
   },
   {
-    icon: <Book className="w-12 h-12 text-brand-600" />,
+    icon: <BookOpenText className="w-12 h-12 text-brand-600" />,
     title: "Exam Preparation",
     description: "Coaching referrals and personalized study plans for exams like JEE, NEET, IELTS, TOEFL, GRE, GMAT, CAT, and more.",
     link: "/services#exam-prep",
