@@ -167,7 +167,7 @@ export default function DestinationsPage() {
 
   const successStories = [
     {
-      name: "Anuska Sain ",
+      name: "Rahul Mahato",
       photo: "/placeholder.svg?height=200&width=200",
       achievement: "Secured full scholarship at MIT for Computer Science",
       testimonial:
