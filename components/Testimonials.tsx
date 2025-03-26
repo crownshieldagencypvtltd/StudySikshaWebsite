@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 
 const testimonials = [
   {
-    name: "Anuska Sain ",
+    name: "Rajesh Mahato",
     position: "Studying at University of Toronto",
     content:
       "Shiksha Yogya made my dream of studying in Canada come true. Their counselors guided me through every step of the application and visa process. I'm now pursuing my Master's degree at the University of Toronto!",
